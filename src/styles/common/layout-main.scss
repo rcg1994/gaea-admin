@@ -1,0 +1,86 @@
+.layout-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  *{
+    box-sizing: border-box;
+  }
+
+  &_header {
+    height: 50px;
+    color: #fff;
+    // background: linear-gradient(to right, #3c91eb, #57c1de);
+    background: linear-gradient(90deg, rgba(48, 136, 255, 1), rgba(57, 126, 204, 1), rgba(6, 144, 242, 1), rgba(13, 197, 225, 1));
+  }
+
+  &_body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    min-height: 0;
+    flex-direction: row;
+  }
+
+  &_aside {
+    width: 220px;
+    color: #fff;
+    background: #333;
+    overflow: scroll;
+    position: relative;
+  }
+
+  &_content {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    background: #EAEDF1;
+  }
+}
+
+.page {
+  height: 100%;
+  padding: 15px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 500px;
+
+  &.is-audit {
+    .creator-table-box {
+      margin-top: 0;
+    }
+  }
+
+  .header-wrap{
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    .tool-box{
+      padding: 20px 0;
+      ._form{
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .add-box {
+    height: 100%;
+    background-color: #ffffff;
+  }
+}
+
+.layout-main_content._full {
+  .page {
+    .tool-box {
+      ._buttons {
+        @media screen and (min-width: 1000px) {
+          width: 360px;
+        }
+        @media screen and (min-width: 1100px) {
+          width: 465px;
+        }
+      }
+    }
+  }
+}

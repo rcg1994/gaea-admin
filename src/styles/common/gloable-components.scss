@@ -1,0 +1,92 @@
+.g-aside{
+  a{
+    display: block;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.g-button{
+  i{
+    transition: transform 0.2s;
+  }
+  >span i.icon-down{
+    font-size: 12px;
+    transform: scale(0.8);
+    &._reverse{
+      transform: scale(0.8) rotateX(180deg);
+    }
+  }
+}
+
+.g-table-in-edit{
+  border: 1px solid #d9e5ee;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  &.creator-block{
+    box-shadow: none;
+    .creator-sub-table-box{
+      margin: 0;
+      box-shadow: none;
+      .el-table__empty-block{
+        min-height: 200px;
+      }
+    }
+  }
+  .creator-form-box{
+    border-left: 0;
+    border-right: 0;
+    &::after{
+      display: none;
+    }
+    .el-col{
+      border: none;
+    }
+  }
+}
+
+.g-vxe-table{
+  .vxe-table.vxe-editable .vxe-body--column{
+    height: 40px;
+    line-height: 40px;
+    .vxe-default-input{
+      height: 30px;
+      line-height: 30px;
+      border-radius: 0;
+    }
+  }
+  .vxe-header--column .vxe-edit-icon{
+    display: none;
+  }
+  .vxe-table.vxe-editable .vxe-body--column.col--dirty:before{
+    display: none;
+  }
+  .vxe-table .vxe-table--fixed-right-wrapper.scrolling--middle{
+    box-shadow: -4px 0px 4px 0 rgba(0,0,0,.05);
+  }
+  .vxe-table .vxe-body--column.col--valid-error .vxe-cell--valid .vxe-cell--valid-msg{
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .vxe-table .vxe-cell{
+    font-size: 12px;
+    line-height: 23px;
+    // padding: 4px 10px;
+    padding: 8px 10px;
+  }
+  .vxe-table .vxe-header--column{
+    background: #EAEDF1;
+    font-weight: 700;
+    color: #666;
+    font-size: 13px;
+    &:not(.col--ellipsis){
+      line-height: 23px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,330 @@
+.page {
+  &.page-form {
+    padding: 15px 0;
+    // max-width: 1660px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+
+  ._page-wrap {
+    padding: 0 20px;
+    min-width: 800px;
+    height: 100%;
+  }
+
+  .creator-form-box + .creator-button-box{
+    margin: 30px 0;
+  }
+
+}
+
+.form-box {
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+  &.part {
+    background-color: transparent;
+    box-shadow: none;
+
+    ._part-block {
+      margin-top: 10px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+      ._header {
+        display: flex;
+        align-items: center;
+        padding: 0 26px;
+        height: 70px;
+        border-bottom: 2px solid #E9ECF1;
+        margin-bottom: 1px;
+
+        .el-form {
+          display: flex;
+          align-items: center;
+
+          .el-form-item {
+            .el-form-item__label {
+              width: auto;
+              background-color: transparent;
+              padding-right: 0;
+              border-right: none;
+            }
+          }
+        }
+      }
+
+      ._table-wrapper {
+        display: flex;
+
+        .el-table {
+          &::before {
+            height: 0;
+            background-color: transparent;
+          }
+        }
+
+        ._table-divider {
+          width: 2px;
+          margin: 0 1px;
+          background-color: #E9ECF1;
+        }
+      }
+
+      .table-header {
+      }
+
+      .table-header-cell {
+        background-color: #EAEDF1;
+      }
+    }
+  }
+
+  &.is-small{
+    .body {
+      ._body-wrap{
+        max-width: 877px;
+      }
+    }  
+  }
+
+  .body {
+    padding: 20px;
+    height: calc(100% - 60px);
+    overflow: auto;
+
+    ._body-wrap {
+      max-width: 1315px;
+      margin: 0 auto;
+    }
+
+    ._bottom {
+      background-color: #F2FAFF;
+    }
+
+    ._button-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+    }
+
+    ._form-tip {
+      font-size: 13px;
+      margin-left: -15px;
+      line-height: 50px;
+      color: #333333;
+    }
+  }
+
+
+  .el-form-item {
+    margin: 0;
+    // min-height: 50px;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    .el-form-item__label {
+      font-size: 13px;
+      min-height: 48px;
+      color: #333333;
+      line-height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 21px;
+      width: 160px;
+      align-self: stretch;
+      border-right: 1px solid #d9e5ee;
+      box-sizing: border-box;
+      background-color: #f2faff;
+    }
+
+    .el-form-item__content {
+      // max-width: 280px;
+      flex: 1;
+      box-sizing: border-box;
+      padding: 8px 20px;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+
+      .el-input__inner {
+        border-radius: 0;
+      }
+
+      .el-input__suffix{
+        height: 30px;
+      }
+
+      .el-radio {
+        color: #333333;
+        font-weight: 400;
+        height: 32px;
+        line-height: 32px;
+
+        .el-radio__label {
+          font-size: 13px;
+        }
+
+        .el-radio__input.is-checked + .el-radio__label {
+          color: #333333;
+        }
+
+        &.is-checked {
+          .el-radio__inner {
+            border: 1px solid #d5d5d5;
+            background-color: #fff;
+
+            &::after {
+              width: 6px;
+              height: 6px;
+              background-color: #333333;
+            }
+          }
+        }
+      }
+
+      .el-select {
+        width: 100%;
+      }
+
+      .el-checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        // padding: 10px 0;
+
+        .el-checkbox {
+          // width: 16%;
+          height: 25px;
+          line-height: 25px;
+
+          .el-checkbox__label {
+            font-size: 13px;
+            color: #333333;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .el-range-editor--small.el-input__inner{
+        height: 32px;
+      }
+    }
+
+    &.with-audit{
+      .el-form-item__label{
+        font-weight: bold;
+      }
+      .el-form-item__content{
+        flex-direction: column;
+        align-items: flex-start;
+        .el-radio-group{
+          margin-top: 10px;
+          display: flex;
+          // flex-direction: row-reverse;
+          // .el-radio:last-child{
+          //   margin-right: 30px;
+          // }
+        }
+      }
+    }
+  }
+
+  .el-form {
+    &.is-detail{
+      .el-form-item .el-form-item__content{
+        ._detail{
+          display: flex;
+        }
+        ._edit{
+          display: none;
+        }
+      }
+      .el-form-item__label::before{
+        display: none;
+      }
+      &.is-audit{
+        .show-audit{
+          .el-form-item .el-form-item__content{
+            ._detail{
+              display: none;
+            }
+            ._edit{
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+    &.is-edit, &.is-add{
+      ._edit{
+        display: block;
+        &.creator-button-box, &.el-checkbox-group, &.creator-form-item-append{
+          display: flex;
+        }
+      }
+    }
+    &.is-search-box{
+      ._detail{
+        display: block;
+      }
+      ._edit{
+        display: block;
+        &.creator-button-box{
+          display: flex;
+        }
+      }
+    }
+    ._info, ._detail{
+      display: flex;
+      font-size: 13px;
+      color: #333333;
+      min-height: 32px;
+      line-height: 16px;
+      align-items: center;
+      word-break: break-all;
+    }
+    ._detail{
+      display: none;
+    }
+    ._edit{
+      display: none;
+    }
+  }
+
+  .el-col.el-col-0{
+    display: block;
+    &::after{
+      display: none;
+    }
+  }
+
+  .creator-sub-table-box{
+    height: unset;
+    min-height: 0;
+    flex: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    padding: 0;
+    ._table {
+      .el-table thead tr th{
+        background: #EAEDF1;
+      }
+      tbody {
+        td{
+          // padding:  5px 0;
+        }
+      }
+    }
+    ._footer{
+      padding: 0;
+    }
+  }
+
+}
