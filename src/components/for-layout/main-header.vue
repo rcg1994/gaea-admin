@@ -4,9 +4,6 @@
       GAEA-ADMIN
     </div>
     <div class="layout-main_header_tool">
-      <creator-button v-if="!isPro" class="_creator">
-        <i class="iconfont icon-creator"></i>
-      </creator-button>
       <span class="_message is-touchable">
         <i class="iconfont icon-message"></i>
         <b>0</b>
@@ -28,12 +25,7 @@
 </template>
 
 <script>
-import CreatorButton from "../../../creator/trigger.vue";
-
 export default {
-  components: {
-    CreatorButton,
-  },
   data() {
     return {
       isPro: process.env.NODE_ENV === "production",

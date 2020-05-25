@@ -11,6 +11,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@rcg1994/gaea": "^0.0.1",
     "bignumber.js": "^9.0.0",
     "core-js": "^3.3.2",
     "element-ui": "^2.12.0",

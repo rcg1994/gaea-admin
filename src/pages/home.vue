@@ -8,7 +8,7 @@
       <a target="_blank" href="http://localhost:3001/"
         >http://localhost:3001/</a
       >
-      或点击上方小火箭访问。
+      访问。
     </p>
   </div>
 </template>
